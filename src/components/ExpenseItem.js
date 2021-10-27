@@ -1,13 +1,13 @@
 import './ExpenseItem.css';
 
-const ExpenseItem = () => {
+const ExpenseItem = ({ title, amount, date }) => {
   return (
     <div className='expense-item'>
-      <div>October 27th 2021</div>
+      <div>{date}</div>
       <div className='expense-item__description'>
-        <h2>Car Insurance</h2>
+        <h2>{title}</h2>
       </div>
-      <div className='expense-item__price'>$300</div>
+      <div className='expense-item__price'>{`$${amount}`}</div>
     </div>
   );
 };
