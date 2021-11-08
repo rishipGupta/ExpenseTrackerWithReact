@@ -4,7 +4,7 @@ import './ExpenseDate.css';
 const ExpenseDate = ({ date }) => {
   const month = date.toLocaleString('en-US', { month: 'long' });
   const day = date.toLocaleString('en-US', { day: '2-digit' });
-  const year = '2021';
+  const year = date.toLocaleString('en-US', { year: 'numeric' });
   return (
     <div className='expense-date'>
       <div className='expense-date__month'>{month}</div>
